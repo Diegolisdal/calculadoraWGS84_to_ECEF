@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Conversor WGS84 a ECEF</title>
+  <link rel="stylesheet" href="style.css">  
+</head>
+<body>
+  <div class="container">
+    <h1>Conversor WGS84 a ECEF</h1>
+    
+    <!-- Latitud -->
+    <label>Latitud (Grados, Minutos, Segundos)</label>
+    <div class="coordinate-group">
+      <div>
+        <input type="number" id="latDegrees" placeholder="Grados">
+      </div>
+      <div>
+        <input type="number" id="latMinutes" placeholder="Minutos">
+      </div>
+      <div>
+        <input type="number" id="latSeconds" placeholder="Segundos">
+      </div>
+      <div>
+        <select id="latHemisphere">
+          <option value="N">Norte</option>
+          <option value="S">Sur</option>
+        </select>
+      </div>
+    </div>
+    
+    <!-- Longitud -->
+    <label>Longitud (Grados, Minutos, Segundos)</label>
+    <div class="coordinate-group">
+      <div>
+        <input type="number" id="lonDegrees" placeholder="Grados">
+      </div>
+      <div>
+        <input type="number" id="lonMinutes" placeholder="Minutos">
+      </div>
+      <div>
+        <input type="number" id="lonSeconds" placeholder="Segundos">
+      </div>
+      <div>
+        <select id="lonHemisphere">
+          <option value="E">Este</option>
+          <option value="W">Oeste</option>
+        </select>
+      </div>
+    </div>
+    
+    <!-- Altura -->
+    <label>Altura (metros)</label>
+    <input type="number" id="height" placeholder="Altura en metros">
+    
+    <!-- Botón de conversión -->
+    <button onclick="convertir()">Convertir a ECEF</button>
+    
+    <!-- Resultados -->
+    <div class="result" id="resultado">
+      <h3>Coordenadas ECEF:</h3>
+      <p id="xCoord"></p>
+      <p id="yCoord"></p>
+      <p id="zCoord"></p>
+    </div>
+  </div>
+  
+  <script src="scripts.js"></script>
+</body>
+</html>
